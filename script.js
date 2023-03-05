@@ -12,13 +12,27 @@ submitButton.addEventListener('click', function() {
 
 var mentality_factor = 0;
 var validity = 1;
+var identifier = 0;
 function generateBotResponse(userMessage) {
-    if(userMessage.toLowerCase() == 'hello')
-        return 'Hello!. Can I ask some questions? (y/n)';
+    if(userMessage.toLowerCase() == 'hello' || userMessage.toLowerCase() == 'hi')
+        return 'Hello!. Do you want to hear a joke? (yep/nope)';
+    
+    else if(userMessage.toLowerCase() == 'yep'){
+        return 'My friend thinks he is smart. He told me an onion is the only food that makes you cry, so I threw a coconut at his face. Can I ask some questions? (y/n)';
+    }
+
+    else if(userMessage.toLowerCase() == 'nope'){
+        return 'Okay .. Can I ask some questions? (y/n)';
+    }
+
+    else if(userMessage.toLowerCase() == 'can you tell a joke?'){
+        return 'Once an old man says: When a newly married couple smiles, everyone knows why.But when a fifteen year married couple smiles everyone wonders why..!!!';
+    }
+
     else if(userMessage.toLowerCase() == 'how are you?')
-        return 'I am fine, thank you!. Can I ask some questions? (y/n)';
+        return 'I am fine, thank you!';
     else if(userMessage.toLowerCase() == 'what is your name?')
-        return 'My name is Chatbot. Can I ask some questions? (y/n)';
+        return 'My name is Chatbot';
     else if(userMessage.toLowerCase() == 'y'){
         validity = 1;
         return 'How are you feeling today? (good or bad)'; 
@@ -37,7 +51,7 @@ function generateBotResponse(userMessage) {
         return 'How many hours of sleep did you get last night? (1-10)';
     }
 
-    else if(parseInt(userMessage) > 5 && validity == 1){
+    else if(parseInt(userMessage) >= 5 && validity == 1){
         mentality_factor += 1;
         return 'Have you been feeling any stress or tension lately? (yes/no)';
     }
@@ -58,7 +72,7 @@ function generateBotResponse(userMessage) {
     }
 
     else if(userMessage.toLowerCase() == 'yes i want' && validity == 1){
-        return 'Okay. Pleace hold on..';
+        return 'Okay. please contact 1789665420';
     }
 
     else if(userMessage.toLowerCase() == 'no i dont want' && validity == 1){
@@ -68,6 +82,9 @@ function generateBotResponse(userMessage) {
         else{
             return 'Questionare is completed. You are in bad mental health. Please contact a counselor. Have a nice day!';
         }
+    }
+    else{
+        return 'I am sorry. I do not understand.';
     }
 }
 
