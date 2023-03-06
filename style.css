@@ -1,7 +1,7 @@
 #chat-container {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
-  padding: 10px;
+  padding: 0px;
   background-color: #323333;
   border-radius: 10px;
 }
@@ -15,28 +15,28 @@
   margin-bottom: 10px;
 }
 
+#chat-history .message.user .text {
+  text-align: left;
+  background-color: #2020208b;
+  color: white;
+  border-radius: 10px 0px 10px 10px;
+}
+
 #chat-history .message.user {
   text-align: right;
 }
 
-#chat-history .message.bot {
+#chat-history .message.bot .text {
   text-align: left;
+  border-radius: 0px 10px 10px 10px;
+  background-color: #1a8a55e0;
+  color: #ffffff;
 }
 
 #chat-history .message .text {
   padding: 10px;
-  background-color: #00ff15;
-  border-radius: 5px;
   display: inline-block;
-}
-
-.welcome{
-  text-align: left;
-  padding: 10px;
-  background-color: #00ff15;
-  border-radius: 5px;
-  display: inline-block;
-  top: 0;
+  max-width: 50%;
 }
 
 #chat-input {
@@ -45,24 +45,39 @@
 }
 
 #message-input {
+  transition: 0.2s;
   flex-grow: 1;
   padding: 10px;
   border: none;
-  background-color: #00ff15;
-  border: 1px solid #00ff15;
+  background-color: #2020208b;
+  border: 1px solid #787878b2;
+  color: white;
   border-radius: 10px;
   font-size: 16px;
 }
 
+#message-input:hover {
+  transition: 0.2s;
+  background-color: #202020a9;
+  border: 1px solid #787878d2;
+}
+
 #submit-button {
+  transition: 0.2s;
   margin-left: 10px;
   padding: 10px;
   border: none;
   border-radius: 10px;
-  background-color: #00ff15;
-  color: #000000;
+  background-color: #606060be;
+  color: #cdcdcd;
   font-size: 16px;
   cursor: pointer;
+}
+
+#submit-button:hover {
+  transition: 0.2s;
+  background-color: #60606089;
+  color: #d3d3d3;
 }
 
 body{
@@ -70,17 +85,26 @@ body{
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 5px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #404040; 
+  background: #00000000; 
+}
+
+::-webkit-scrollbar-track:hover {
+  background: #42424263; 
 }
  
 ::-webkit-scrollbar-thumb {
-  background: #727272; 
+  background: #72727200; 
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #727272; 
+  background: #1e1e1e8b; 
+  border-radius: 10px;
+}
+
+textarea {
+  resize: none;
 }
