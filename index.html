@@ -1,19 +1,18 @@
 <html>
     <head>
         <link rel="stylesheet" href="style.css" />
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
         <title>Chat</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 <body>
     <div id="chat-container">
         <div id="chat-history"></div>
-        <!-- <div class="welcome" style="">Hello, Welcome to ChatBot service!</div> -->
         <div id="chat-input">
-          <input type="text" id="message-input" placeholder="Type a message...">
-          <button id="submit-button">Send</button>
+          <textarea rows="1" id="message-input" placeholder="Type a message..."></textarea>
+          <button id="submit-button"><i class='fa fa-send'></i></button>
         </div>
       </div>  
-      
       <script src="script.js"></script>
 </body>
 </html>
