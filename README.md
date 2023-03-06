@@ -1,3 +1,3 @@
 # MadHack-ChatBot
 
-<a href="https://dasunthathsara.github.io/MadHack-ChatBot/">Chat Bot</a>
+<a href="https://dasunthathsara.github.io/MadHack-ChatBot-Web/">Chat Bot</a>
